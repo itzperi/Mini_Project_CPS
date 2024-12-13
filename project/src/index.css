@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wave-color: #6366f1;
+}
+
+.dark {
+  --wave-color: #4f46e5;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white dark:bg-primary-dark dark:hover:bg-primary;
+  }
+}
